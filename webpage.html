@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage with Gallery and Contact Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        /* Navigation Bar */
+        nav {
+            background-color: #3b5998;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        
+        /* Image Gallery Section */
+        #gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        #gallery img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        #gallery .item {
+            text-align: center;
+        }
+
+        /* About Section */
+        #about {
+            padding: 40px;
+            background-color: #f4f4f4;
+        }
+        #about h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        #about img {
+            width: 30%;
+            margin: 0 10px;
+            border-radius: 8px;
+        }
+
+        /* Contact Us Form */
+        #contact {
+            padding: 40px;
+            background-color: #e2e2e2;
+        }
+        #contact h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        #contact form {
+            max-width: 400px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+        #contact input, #contact textarea {
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        #contact button {
+            padding: 10px;
+            background-color: #3b5998;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Popup Style */
+        .popup {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .popup .message {
+            text-align: center;
+        }
+        .popup button {
+            background-color: #3b5998;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#gallery">Image Gallery</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact Us</a>
+    </nav>
+
+    <!-- Home Section (Optional) -->
+    <section id="home">
+        <h1>Welcome to Our Website</h1>
+    </section>
+
+    <!-- Image Gallery Section -->
+    <section id="gallery">
+        <h2>Image Gallery</h2>
+        <!-- Repeat this block for 15 images -->
+        <div class="item">
+            <img src="image1.jpg" alt="Image 1">
+            <p>Description of Image 1</p>
+            <button>View More</button>
+        </div>
+        <div class="item">
+            <img src="image2.jpg" alt="Image 2">
+            <p>Description of Image 2</p>
+            <button>View More</button>
+        </div>
+        <div class="item">
+            <img src="image3.jpg" alt="Image 3">
+            <p>Description of Image 3</p>
+            <button>View More</button>
+        </div>
+        <!-- Continue for 15 images -->
+        <div class="item">
+            <img src="image4.jpg" alt="Image 4">
+            <p>Description of Image 4</p>
+            <button>View More</button>
+        </div>
+        <div class="item">
+            <img src="image5.jpg" alt="Image 5">
+            <p>Description of Image 5</p>
+            <button>View More</button>
+        </div>
+        <div class="item">
+            <img src="image6.jpg" alt="Image 6">
+            <p>Description of Image 6</p>
+            <button>View More</button>
+        </div>
+        <div class="item">
+            <img src="image7.jpg" alt="Image 7">
+            <p>Description of Image 7</p>
+            <button>View More</button>
+        </div>
+        <div class="item">
+            <img src="image8.jpg" alt="Image 8">
+            <p>Description of Image 8</p>
+            <button>View More</button>
+        </div>
+        <div class="item">
+            <img src="image9.jpg" alt="Image 9">
+            <p>Description of Image 9</p>
+            <button>View More</button>
+        </div>
+        <div class="item">
+            <img src="image10.jpg" alt="Image 10">
+            <p>Description of Image 10</p>
+            <button>View More</button>
+        </div>
+        <div class="item">
+            <img src="image11.jpg" alt="Image 11">
+            <p>Description of Image 11</p>
+            <button>View More</button>
+        </div>
+        <div class="item">
+            <img src="image12.jpg" alt="Image 12">
+            <p>Description of Image 12</p>
+            <button>View More</button>
+        </div>
+        <div class="item">
+            <img src="image13.jpg" alt="Image 13">
+            <p>Description of Image 13</p>
+            <button>View More</button>
+        </div>
+        <div class="item">
+            <img src="image14.jpg" alt="Image 14">
+            <p>Description of Image 14</p>
+            <button>View More</button>
+        </div>
+        <div class="item">
+            <img src="image15.jpg" alt="Image 15">
+            <p>Description of Image 15</p>
+            <button>View More</button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <div>
+            <img src="about1.jpg" alt="About Image 1">
+            <p>Our company offers the best solutions for your needs.</p>
+        </div>
+        <div>
+            <img src="about2.jpg" alt="About Image 2">
+            <p>We value quality and customer satisfaction above all.</p>
+        </div>
+        <div>
+            <p>Contact Information: </p>
+            <p>Email: contact@company.com</p>
+            <p>Phone: +1234567890</p>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <!-- Popup -->
+    <div id="popup" class="popup">
+        <div class="message">
+            <p>Thank you for contacting us!</p>
+            <button onclick="closePopup()">Close</button>
+        </div>
+    </div>
+
+    <script>
+        // Show Popup
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            document.getElementById("popup").style.display = "block";
+        });
+
+        // Close Popup
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+        }
+    </script>
+</body>
+</html>
